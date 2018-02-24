@@ -6,6 +6,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Qualcosa è andato storto :/</h1>
+        <h1>Successo!</h1>
     </body>
 </html>

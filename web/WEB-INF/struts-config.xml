@@ -7,7 +7,7 @@
 
 <struts-config>
     <form-beans>
-    
+        <form-bean name="ProvaAction" type="controller.ProvaAction" />
     </form-beans>
     
     <global-exceptions>
@@ -23,7 +23,11 @@
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
         <action path="/WhoWeAre" forward="/whoweare.jsp"/>
         <action path="/Contacts" forward="/contacts.jsp"/>
-        <action path="/error"><forward path="/error.jsp"/></action>
+        <action path="/Error" forward="/error.jsp" />
+        <action path="/ProvaAction" type="controller.ProvaAction">
+            <forward name="ok" path="/success.jsp" />
+            <forword name="fail" path="/error.jsp" />
+        </action>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

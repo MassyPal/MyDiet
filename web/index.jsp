@@ -17,6 +17,8 @@
     <ul>
         <li><a href="WhoWeAre.do">Chi Siamo</a>
         <li><a href="Contacts.do">Contatti</a>
+        <li><a href="Error.do">Errore</a>
+        <li><a href="ProvaAction.do">Prova Action</a>
      </ul>
     </body>
 </html>
