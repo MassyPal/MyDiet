@@ -21,6 +21,8 @@
 
     <action-mappings>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        <action path="/WhoWeAre" forward="/whoweare.jsp"/>
+        <action path="/Contacts" forward="/contacts.jsp"/>
         <action path="/error"><forward path="/error.jsp"/></action>
     </action-mappings>
     
