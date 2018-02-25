@@ -7,7 +7,7 @@
 
 <struts-config>
     <form-beans>
-        <form-bean name="ProvaAction" type="controller.ProvaAction" />
+        <!--form-bean name="ProvaAction" type="controller.ProvaAction" /-->
     </form-beans>
     
     <global-exceptions>
@@ -17,16 +17,21 @@
     <global-forwards>
         <forward name="welcome"  path="/Welcome.do"/>
         <forward name="error" path="/error.jsp"/>
+        <forward name="Contacts" path="contacts.jsp"/>
     </global-forwards>
 
     <action-mappings>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
         <action path="/WhoWeAre" forward="/whoweare.jsp"/>
-        <action path="/Contacts" forward="/contacts.jsp"/>
+        <!--action path="/Contacts" forward="/contacts.jsp"/-->
         <action path="/Error" forward="/error.jsp" />
-        <action path="/ProvaAction" type="controller.ProvaAction">
+        <action path="/ProvaActionOk" type="controller.ProvaAction" parameter="successo">
             <forward name="ok" path="/success.jsp" />
-            <forword name="fail" path="/error.jsp" />
+            <forward name="fail" path="/error.jsp" />
+        </action>
+        <action path="/ProvaActionFail" type="controller.ProvaAction" parameter="fallimento">
+            <forward name="ok" path="/success.jsp" />
+            <forward name="fail" path="/error.jsp" />
         </action>
     </action-mappings>
     
